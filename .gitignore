@@ -151,5 +151,5 @@ dmypy.json
 .prof
 
 #my_folder
-
-# End of https://www.toptal.com/developers/gitignore/api/django
+/media
+# End of https://www.toptal.com/developers/gitignore/api/djangor
