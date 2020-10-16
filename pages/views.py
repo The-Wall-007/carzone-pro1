@@ -13,7 +13,7 @@ def home(request):
         'featured_cars' : featured_cars,
         'cars' : cars,
     }
-    return render(request,'pages/home.html',context)
+    return render(request,'pages/index.html',context)
 
 def car(request):
     return render(request,'pages/cars.html')

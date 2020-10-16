@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from ckeditor.fields import RichTextField
 from multiselectfield import MultiSelectField
+from django.shortcuts import reverse
 # Create your models here.
 class Car(models.Model):
     
@@ -129,3 +130,6 @@ class Car(models.Model):
         except:
             url = self.car_photo.url
         return url
+
+    def get_absolute_url(self):
+        return reverse("car-details", kwargs={'id': self.id})
