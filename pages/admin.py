@@ -7,7 +7,8 @@ class TeamAdmin(admin.ModelAdmin):
 
     # show image in admin panel
     def thumbnail(self,object):
-        return format_html("<img src='{}' width='35' style='border-radius:17.5px' />".format(object.photo.url))
+        return format_html("<img src='{}' width='35' style='border-radius:17.5px;' />".format(object.photo.url))
+    
     thumbnail.short_description = 'image'
 
     list_display = ('id', 'thumbnail' ,'first_name','last_name','designation','craeted_date')
